@@ -18,7 +18,7 @@
 ## 📦 Требования
 
 - **Python 3.11+**  
-- **uv** установлен в систему  
+- Uvicorn установлен в систему  
 - Браузер (для Swagger UI `/docs`) или любой HTTP-клиент (curl, Postman, Hoppscotch)
 
 ---
@@ -128,7 +128,7 @@ curl http://127.0.0.1:8000/health
 {
   "status": "ok",
   "service": "dataset-quality",
-  "version": "0.2.0"
+  "version": "0.3.1"
 }
 ```
 
@@ -136,8 +136,7 @@ curl http://127.0.0.1:8000/health
 
 ### 2️⃣ GET `/docs` — Swagger UI
 
-Документация и тестирование API:
-**[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**
+Документация и тестирование API: **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**
 
 Через `/docs` можно:
 
@@ -148,7 +147,7 @@ curl http://127.0.0.1:8000/health
 
 ---
 
-### 3️⃣ POST `/quality` — анализ агрегированных признаков
+### 3️⃣ POST `/quality` — анализ агрегированных признаков (старые флаги)
 
 Эндпоинт принимает JSON с агрегированными характеристиками датасета:
 
@@ -165,15 +164,14 @@ curl -X POST "http://127.0.0.1:8000/quality" \
 ```json
 {
   "ok_for_model": true,
-  "quality_score": 0.8,
+  "quality_score": 0.85,
   "message": "Данных достаточно, модель можно обучать (по текущим эвристикам).",
   "latency_ms": 3.2,
   "flags": {
     "too_few_rows": false,
     "too_many_columns": false,
-    "too_many_missing": false,
-    "no_numeric_columns": false,
-    "no_categorical_columns": false
+    "max_missing_share": false,
+    "too_many_missing": false
   },
   "dataset_shape": {
     "n_rows": 10000,
@@ -184,9 +182,9 @@ curl -X POST "http://127.0.0.1:8000/quality" \
 
 ---
 
-### 4️⃣ POST `/quality-from-csv` — оценка качества по CSV
+### 4️⃣ POST `/quality-from-csv` — оценка качества по CSV (старые флаги)
 
-Эндпоинт принимает CSV-файл и возвращает оценку качества:
+Эндпоинт принимает CSV-файл и возвращает **старые флаги качества**, вычисленные без новых эвристик:
 
 **Пример запроса:**
 
@@ -200,19 +198,19 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 ```json
 {
   "ok_for_model": true,
-  "quality_score": 0.75,
+  "quality_score": 0.72,
+  "message": "CSV достаточно качественный для модели.",
+  "latency_ms": 5.8,
   "flags": {
     "too_few_rows": false,
     "too_many_columns": false,
-    "too_many_missing": true,
-    "no_numeric_columns": false,
-    "no_categorical_columns": false
+    "max_missing_share": false,
+    "too_many_missing": true
   },
   "dataset_shape": {
     "n_rows": 5234,
     "n_cols": 18
-  },
-  "latency_ms": 5.8
+  }
 }
 ```
 
@@ -220,13 +218,7 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 
 ### 5️⃣ 🆕 POST `/quality-flags-from-csv` — расширенные флаги качества (HW03/HW04)
 
-Эндпоинт принимает CSV-файл и возвращает **все базовые флаги + новые HW03-флаги**:
-
-* `has_high_ratio_of_unique_values`
-* `has_outliers`
-* `has_mixed_types`
-* `has_imbalanced_categoricals`
-* `has_many_repeated_rows`
+Эндпоинт принимает CSV-файл и возвращает **все флаги**, включая новые HW03-флаги, и рассчитывает **новое качество**:
 
 **Пример запроса:**
 
@@ -239,13 +231,15 @@ curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
 
 ```json
 {
+  "ok_for_model": true,
+  "quality_score": 0.65,
+  "message": "CSV достаточно качественный для модели.",
+  "latency_ms": 6.91,
   "flags": {
     "too_few_rows": false,
     "too_many_columns": false,
+    "max_missing_share": false,
     "too_many_missing": false,
-    "no_numeric_columns": false,
-    "no_categorical_columns": false,
-
     "has_high_ratio_of_unique_values": true,
     "has_outliers": true,
     "has_mixed_types": false,
@@ -255,8 +249,7 @@ curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
   "dataset_shape": {
     "n_rows": 5234,
     "n_cols": 18
-  },
-  "latency_ms": 6.91
+  }
 }
 ```
 
