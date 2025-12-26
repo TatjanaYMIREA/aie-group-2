@@ -1,0 +1,61 @@
+{
+  "ds1": {
+    "kmeans": {
+      "params": {
+        "k": 2
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "dbscan": {
+      "params": {
+        "eps": 2.0,
+        "min_samples": 10
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "agg": {
+      "params": {
+        "k": 2,
+        "linkage": "ward"
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    }
+  },
+  "ds2": {
+    "kmeans": {
+      "params": {
+        "k": 2
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "dbscan": {
+      "params": {
+        "eps": 2.0,
+        "min_samples": 10
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "agg": {
+      "params": {
+        "k": 2,
+        "linkage": "average"
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    }
+  },
+  "ds4": {
+    "kmeans": {
+      "params": {
+        "k": 7
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "dbscan": {
+      "params": {
+        "eps": 2.0,
+        "min_samples": 10
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    }
+  }
+}
