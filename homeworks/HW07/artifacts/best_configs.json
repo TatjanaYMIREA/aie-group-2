@@ -9,7 +9,7 @@
     "dbscan": {
       "params": {
         "eps": 2.0,
-        "min_samples": 10
+        "min_samples": 3
       },
       "selection_criterion": "max silhouette (with interpretability / noise check)"
     },
@@ -30,7 +30,7 @@
     },
     "dbscan": {
       "params": {
-        "eps": 2.0,
+        "eps": 0.5,
         "min_samples": 10
       },
       "selection_criterion": "max silhouette (with interpretability / noise check)"
@@ -54,6 +54,13 @@
       "params": {
         "eps": 2.0,
         "min_samples": 10
+      },
+      "selection_criterion": "max silhouette (with interpretability / noise check)"
+    },
+    "agg": {
+      "params": {
+        "k": 5,
+        "linkage": "ward"
       },
       "selection_criterion": "max silhouette (with interpretability / noise check)"
     }

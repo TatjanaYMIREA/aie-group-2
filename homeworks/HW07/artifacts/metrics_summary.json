@@ -7,10 +7,10 @@
       "noise_frac": 0.0
     },
     "dbscan": {
-      "silhouette": 0.507439052565806,
-      "davies_bouldin": 0.8240137635962008,
-      "calinski_harabasz": 3916.495107696841,
-      "noise_frac": 0.4885
+      "silhouette": 0.5216395622404242,
+      "davies_bouldin": 0.6853295219054457,
+      "calinski_harabasz": 11786.954622671532,
+      "noise_frac": 0.0
     },
     "agg": {
       "silhouette": 0.5216395622404242,
@@ -27,10 +27,10 @@
       "noise_frac": 0.0
     },
     "dbscan": {
-      "silhouette": 0.507439052565806,
-      "davies_bouldin": 0.8240137635962008,
-      "calinski_harabasz": 3916.495107696841,
-      "noise_frac": 0.4885
+      "silhouette": 0.25120225459401474,
+      "davies_bouldin": 0.7420731639720546,
+      "calinski_harabasz": 26.168575636304777,
+      "noise_frac": 0.063625
     },
     "agg": {
       "silhouette": 0.41976775922231674,
@@ -51,6 +51,12 @@
       "davies_bouldin": 0.8240137635962008,
       "calinski_harabasz": 3916.495107696841,
       "noise_frac": 0.4885
+    },
+    "agg": {
+      "silhouette": 0.4473688782796916,
+      "davies_bouldin": 0.975904265483746,
+      "calinski_harabasz": 5087.688517434968,
+      "noise_frac": 0.0
     }
   }
 }
