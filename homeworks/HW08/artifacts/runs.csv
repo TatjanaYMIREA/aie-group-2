@@ -1,0 +1,6 @@
+experiment_id,dataset,seed,model_summary,dropout,batchnorm,epochs_trained,best_val_accuracy,best_val_loss,best_epoch
+E0,EMNIST,42,"Baseline (1 скрытый слой, 128 нейронов)",False,False,20,0.8179444050991501,0.6029699009133466,19
+E1,EMNIST,42,"Более глубокая сеть (2 слоя: 256, 128)",False,False,20,0.8352514164305949,0.5414251594384737,15
+E2,EMNIST,42,E1 + Dropout(0.3),True,False,20,0.8213526912181303,0.5477818993603542,18
+E3,EMNIST,42,E1 + BatchNorm,False,True,20,0.8510534702549575,0.49367995627709893,17
+E4,EMNIST,42,Лучший из E2/E3 (E3 + EarlyStopping),False,True,14,0.8510092067988668,0.45910398995572377,9
