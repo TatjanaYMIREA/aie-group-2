@@ -1,0 +1,13 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleSTL10CNN,Adam,0.001,4,0.457,0.4426666666666666,,,,simple-cnn-base
+C2,classification,STL10,42,SimpleSTL10CNN,Adam,0.001,4,0.449,0.4786666666666667,,,,simple-cnn-aug
+C3,classification,STL10,42,ResNet,Adam,0.001,3,0.931,0.936,,,,resnet18-head-only
+C4,classification,STL10,42,ResNet,Adam,1e-3/1e-4,3,0.947,0.9626666666666668,,,,resnet18-finetune
+V1,segmentation,OxfordIIITPet,42,DeepLabV3,,,0,,,0.8140825323790682,0.4416890808580886,0.365717243405913,threshold=0.5
+V2,segmentation,OxfordIIITPet,42,DeepLabV3,,,0,,,0.2945922443982792,0.0604750775666414,0.0583626599025239,"threshold=0.7, min_size=100"
+C1,classification,STL10,42,SimpleSTL10CNN,Adam,0.001,4,0.457,0.4426666666666666,,,,simple-cnn-base
+C2,classification,STL10,42,SimpleSTL10CNN,Adam,0.001,4,0.449,0.4786666666666667,,,,simple-cnn-aug
+C3,classification,STL10,42,ResNet,Adam,0.001,3,0.931,0.936,,,,resnet18-head-only
+C4,classification,STL10,42,ResNet,Adam,1e-3/1e-4,3,0.947,0.9626666666666668,,,,resnet18-finetune
+V1,segmentation,OxfordIIITPet,42,DeepLabV3,,,0,,,0.8140825323790682,0.4416890808580886,0.365717243405913,threshold=0.5
+V2,segmentation,OxfordIIITPet,42,DeepLabV3,N/A,N/A,0,,,0.2945922443982792,0.0604750775666414,0.05836265990252395,"threshold=0.7, min_size=100"

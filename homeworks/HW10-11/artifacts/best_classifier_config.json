@@ -1,0 +1,11 @@
+{
+  "experiment": "C4",
+  "dataset": "STL10",
+  "architecture": "ResNet18",
+  "val_accuracy": 0.947,
+  "test_accuracy": 0.9626666666666667,
+  "seed": 42,
+  "augmentations": true,
+  "transfer_learning": true,
+  "fine_tuned": true
+}
