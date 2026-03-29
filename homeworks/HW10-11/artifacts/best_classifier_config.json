@@ -7,5 +7,29 @@
   "seed": 42,
   "augmentations": true,
   "transfer_learning": true,
-  "fine_tuned": true
+  "fine_tuned": true,
+  "batch_size": 128,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "learning_rate_layer4": 0.0001,
+  "epochs": 3,
+  "loss_function": "CrossEntropyLoss",
+  "weight_decay": 0.0,
+  "input_size": 224,
+  "num_classes": 10,
+  "transforms": {
+    "train": [
+      "Resize(224)",
+      "ToTensor",
+      "Normalize(ImageNet)"
+    ],
+    "augmentations": [
+      "RandomHorizontalFlip(p=0.5)",
+      "RandomRotation(10)",
+      "ColorJitter(brightness=0.2, contrast=0.2)"
+    ]
+  },
+  "device": "cpu",
+  "num_workers": 4,
+  "pin_memory": true
 }
