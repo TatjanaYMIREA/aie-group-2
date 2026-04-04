@@ -1,0 +1,11 @@
+{
+  "mean_hit@1": 0.7,
+  "mean_hit@3": 0.8,
+  "mean_hit@5": 0.9,
+  "mean_recall@1": 0.7,
+  "mean_recall@3": 0.8,
+  "mean_recall@5": 0.9,
+  "num_documents": 15,
+  "num_chunks": 21,
+  "backend_used": "SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+}

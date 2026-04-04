@@ -1,0 +1,11 @@
+query,expected_source,retrieved_sources,hit_at_1,hit_at_3,hit_at_5,recall_at_1,recall_at_3,recall_at_5
+Как добавить элемент в список?,doc_01,"doc_01, doc_01, doc_06, doc_12, doc_02",1,1,1,1.0,1.0,1.0
+Как получить все ключи из словаря?,doc_02,"doc_02, doc_02, doc_06, doc_09, doc_12",1,1,1,1.0,1.0,1.0
+Что делает return в функции?,doc_03,"doc_03, doc_05, doc_02, doc_08, doc_12",1,1,1,1.0,1.0,1.0
+Что такое self в классе?,doc_04,"doc_04, doc_06, doc_12, doc_02, doc_01",1,1,1,1.0,1.0,1.0
+Как создать декоратор в Python?,doc_05,"doc_01, doc_10, doc_06, doc_06, doc_04",0,0,0,0.0,0.0,0.0
+Что такое list comprehension?,doc_06,"doc_06, doc_01, doc_02, doc_12, doc_05",1,1,1,1.0,1.0,1.0
+Как перехватить ошибку в Python?,doc_07,"doc_01, doc_07, doc_03, doc_06, doc_11",0,1,1,0.0,1.0,1.0
+Как правильно открыть файл?,doc_08,"doc_08, doc_10, doc_10, doc_11, doc_02",1,1,1,1.0,1.0,1.0
+Что такое lambda функция?,doc_09,"doc_09, doc_05, doc_03, doc_06, doc_12",1,1,1,1.0,1.0,1.0
+Как сделать срез списка?,doc_11,"doc_06, doc_12, doc_01, doc_11, doc_02",0,0,1,0.0,0.0,1.0
