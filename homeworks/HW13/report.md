@@ -24,7 +24,7 @@
 
 ## 3. Данные и постановка задачи
 
-- **Датасет**: emotion (HuggingFace datasets, https://huggingface.co/datasets/emotion)
+- **Датасет**: emotion (HuggingFace datasets)
 - **Число классов**: 6
 - **Названия классов**: sadness, joy, love, anger, fear, surprise
 - **Размер `train`**: 16000 примеров
