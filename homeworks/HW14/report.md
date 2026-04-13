@@ -27,7 +27,7 @@
 - sentence-transformers / transformers / sklearn: sentence-transformers доступен, sklearn использован для TfidfVectorizer
 - torch (если использовался): torch установлен, но GPU недоступен
 - Устройство (CPU/GPU): CPU
-- Seed: 42
+- Seed: 42 (зафиксирован через `random.seed(42)`, `np.random.seed(42)` и `torch.manual_seed(42)`)
 - Как запустить: открыть `HW14.ipynb` и выполнить Run All.
 
 ## 3. База знаний и подготовка документов
@@ -64,6 +64,7 @@
   mean_hit@1 = 0.70, mean_hit@3 = 0.80, mean_hit@5 = 0.90
 - Итоговый `recall@k`:  
   mean_recall@1 = 0.70, mean_recall@3 = 0.80, mean_recall@5 = 0.90
+- Какая метрика сохранена в `hit_at_k` в файле `retrieval_eval.csv`: hit@3
 - Дополнительные метрики (если были): нет
 - Какие запросы оказались самыми простыми:  
   q01 (списки), q02 (словари), q03 (return), q04 (self), q06 (list comprehension), q08 (файлы), q09 (lambda) — все дали hit@1 = 1.0
