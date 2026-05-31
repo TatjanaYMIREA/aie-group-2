@@ -1,0 +1,32 @@
+{
+  "high_happiness_country": {
+    "Log_GDP_per_capita": 10.8,
+    "Social_support": 0.95,
+    "Healthy_life_expectancy_at_birth": 72.5,
+    "Freedom_to_make_life_choices": 0.85,
+    "Generosity": 0.25,
+    "Perceptions_of_corruption": 0.85,
+    "Positive_affect": 0.85,
+    "Negative_affect": 0.15
+  },
+  "medium_happiness_country": {
+    "Log_GDP_per_capita": 9.5,
+    "Social_support": 0.80,
+    "Healthy_life_expectancy_at_birth": 65.0,
+    "Freedom_to_make_life_choices": 0.70,
+    "Generosity": 0.10,
+    "Perceptions_of_corruption": 0.70,
+    "Positive_affect": 0.60,
+    "Negative_affect": 0.30
+  },
+  "low_happiness_country": {
+    "Log_GDP_per_capita": 6.5,
+    "Social_support": 0.45,
+    "Healthy_life_expectancy_at_birth": 52.0,
+    "Freedom_to_make_life_choices": 0.35,
+    "Generosity": 0.05,
+    "Perceptions_of_corruption": 0.25,
+    "Positive_affect": 0.35,
+    "Negative_affect": 0.55
+  }
+}
