@@ -65,7 +65,7 @@ async def log_requests(request: Request, call_next):
 
 # Загружаем модель при старте
 load_model()
-logger.info("✅ Сервис запущен")
+logger.info("Сервис запущен")
 
 @app.get("/health")
 async def health_check():
