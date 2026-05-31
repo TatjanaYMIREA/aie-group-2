@@ -21,7 +21,7 @@ def predict_cmd(input, model_path):
 @cli.command()
 def health():
     """Проверка работоспособности"""
-    click.echo("✅ Сервис готов")
+    click.echo("Сервис готов")
 
 if __name__ == "__main__":
     cli()
