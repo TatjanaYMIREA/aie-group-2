@@ -304,9 +304,9 @@ Gradient Boosting (tuned) выбран в качестве финальной м
 ```
 
 **Компоненты:**
-- **API слой:** FastAPI приложение ([`src/happiness/api.py`](api.py)) — обрабатывает HTTP-запросы
-- **Валидация:** Pydantic модели ([`src/happiness/schemas.py`](schemas.py)) — проверяет входные данные
-- **Модельный слой:** ([`src/happiness/predict.py`](predict.py)) — загружает модель и выполняет предсказание
+- **API слой:** FastAPI приложение ([`src/happiness/api.py`](src/happiness/api.py)) — обрабатывает HTTP-запросы
+- **Валидация:** Pydantic модели ([`src/happiness/schemas.py`](src/happiness/schemas.py)) — проверяет входные данные
+- **Модельный слой:** ([`src/happiness/predict.py`](src/happiness/predict.py)) — загружает модель и выполняет предсказание
 - **Артефакты:** `artifacts/` — хранит сериализованную модель и метаданные
 
 ### 6.2. API и endpoints
