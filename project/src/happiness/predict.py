@@ -10,7 +10,7 @@ def load_model(model_path: str = "./artifacts/happiness_model.pkl"):
     _model = joblib.load(model_path)
     with open("./artifacts/features.json", 'r') as f:
         _features = json.load(f)
-    print(f"✅ Модель загружена из {model_path}")
+    print(f"Модель загружена из {model_path}")
 
 def predict(features_dict: dict) -> float:
     global _model, _features
